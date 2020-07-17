@@ -13,20 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/**
- *  Обратная связь
- */
-Route::prefix('/message')->group(function () {
-    // Route::get('/', 'MessageController@index');
-    // Route::get('/{id}', 'MessageController@show');
-    Route::post('/', 'MessageController@store');
-    // Route::put('/{id}', 'MessageController@update');
-    // Route::delete('/{id}', 'MessageController@destroy');
-});
-
-/**
- *  Портфолио
- */
-Route::prefix('/portfolio')->group(function () {
-    Route::get('/', 'PortfolioController@index');
-});
+Route::post('/request', 'MainController@index');
+//Route::post('/login', 'MainController@login');
+//Route::post('/companyProfile', 'MainController@companyProfile');
